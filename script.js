@@ -38,6 +38,7 @@ document.querySelector('.botao-play').addEventListener('click', tocarMusica);
 document.querySelector('.botao-pause').addEventListener('click', pausarMusica);
 
 document.querySelector('.anterior').addEventListener('click', () => {
+    document.querySelector('.anterior').addEventListener('click', tocarMusica);
     indexMusica--;
     if (indexMusica < 0) {
         indexMusica = 23;
@@ -47,6 +48,7 @@ document.querySelector('.anterior').addEventListener('click', () => {
 });
 
 document.querySelector('.proxima').addEventListener('click', () => {
+    document.querySelector('.proxima').addEventListener('click', tocarMusica);
     indexMusica++;
     if (indexMusica > 23) {
         indexMusica = 0;
